@@ -17,7 +17,7 @@ sel_quiz = mathematic_quiz
 
 print(len(sel_quiz.questions))
 for i in range(len(sel_quiz.questions)):
-    print(sel_quiz.display_current_question())
+    print(sel_quiz.get_current_question())
     print(i)
     answer = input("Answer: ")
     sel_quiz.next_question(answer)

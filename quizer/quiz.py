@@ -12,12 +12,18 @@ class Quiz:
         self.current_question = 0
         self.score = 0
     
-    def display_current_question(self):
+    def get_current_question(self):
         question = self.questions[self.current_question]
         return {
             "text": question.text,
-            "answers": list(question.answers.keys()),}
-    
+            "answers": list(question.answers.keys())}
+
+    def print_current_question(self):
+        return f"""вопрос: '{self.get_current_question()["text"]}'\n
+                                           варианты ответов: {', '.join(self.get_current_question()['answers'])}"""
+
+
+        
     def check_answer(self, answer: str):
         if answer in self.questions[self.current_question].answers:
             if self.questions[self.current_question].answers[answer]:
@@ -40,6 +46,6 @@ class Quiz:
         if self.current_question == len(self.questions):
             return f"вы набрали {self.score} из {len(self.questions)}."
         else:
-            return f"""вопрос: '{self.display_current_question()["text"]}'\n
-                                           варианты ответов: {', '.join(self.display_current_question()['answers'])}"""
+            return f"""вопрос: '{self.get_current_question()["text"]}'\n
+                                           варианты ответов: {', '.join(self.get_current_question()['answers'])}"""
         

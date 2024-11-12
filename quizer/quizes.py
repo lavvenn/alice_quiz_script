@@ -102,5 +102,5 @@ folk_art_quiz = Quiz(
 quiz_list = {
     'география': geo_quiz,
     'математика': math_quiz,
-    'народые промыслы': folk_art_quiz
+    'народные промыслы': folk_art_quiz
 }

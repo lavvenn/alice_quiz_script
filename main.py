@@ -3,13 +3,13 @@ from quizer.quiz import Question, Quiz
 
 from handlers import start, choice_theme, in_quiz
 
-from pages.all_games import router
+# from pages.all_games import router
 
 from all_quizzes import all_quizzes
 
 app = FastAPI()
 
-app.include_router(router)
+# app.include_router(router)
 
 GREETING_MESSAGE = """
 Привет! Добро пожаловать в увлекательные викторины.

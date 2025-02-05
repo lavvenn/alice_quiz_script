@@ -39,7 +39,7 @@ class Quiz:
             
                 else:
                     return f"""
-                    неет!! {self.questions[self.current_question - 1].explanation_right_answer} \n
+                    нет!! {self.questions[self.current_question - 1].explanation_right_answer} \n
                     
                     вопрос: '{self.get_current_question()["text"]}'"""
 
